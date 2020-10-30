@@ -52,7 +52,7 @@ public class StarsPositions : MonoBehaviour
         obj.transform.position = new Vector3(0f, 0f, UnityEngine.Random.Range(300f, 500f));
         obj.transform.RotateAround(transform.position, Vector3.right, randomRotation.y);
         obj.transform.RotateAround(transform.position, Vector3.up, randomRotation.x);
-        obj.transform.localScale = Vector3.one * UnityEngine.Random.Range(.05f, 3f);
+        obj.transform.localScale = Vector3.one * UnityEngine.Random.Range(.05f, 2.5f);
     }
 }
 [Serializable]
