@@ -4,30 +4,76 @@ using UnityEngine;
 
 public class StarDropZone : MonoBehaviour
 {
-    public Transform interactableObject = null;
+    private Transform interactableObject = null;
     public Transform socetInteractor;
-
-    // Update is called once per frame
+    private MeshRenderer meshRenderer;
+    private Vector3 oldPostition;
+    private StarConnector starConnector;
+    private void Start()
+    {
+        starConnector = GetComponent<StarConnector>();
+        meshRenderer = GetComponent<MeshRenderer>();
+    }
     void Update()
     {
         if (interactableObject != null)
+        {
+            starConnector.SetLineRendererState(true);
             UpdateSocetPosition();
+        }
+        else
+        {
+            ResetSocketPosition();
+            starConnector.SetLineRendererState(false);
+        }
+        if (oldPostition != socetInteractor.position)
+            meshRenderer.enabled = true;
+        else
+            meshRenderer.enabled = false;
+        oldPostition = socetInteractor.position;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (interactableObject == null)
-            interactableObject = other.transform;
+        if (other.CompareTag("Interactable"))
+        {
+            if (interactableObject == null)
+            {
+                interactableObject = other.transform;
+            }
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (interactableObject.GetInstanceID() == other.transform.GetInstanceID())
-            interactableObject = null;
+        if (other.CompareTag("Interactable"))
+        {
+            if (interactableObject.GetInstanceID() == other.transform.GetInstanceID())
+            {
+                interactableObject = null;
+            }
+        }
     }
 
     void UpdateSocetPosition()
     {
         socetInteractor.position = interactableObject.position;
+    }
+    void ResetSocketPosition()
+    {
+        socetInteractor.position = transform.position;
+    }
+
+    public Transform GetStarPosition()
+    {
+        return socetInteractor;
+    }
+
+    public bool GetState()
+    {
+        if (interactableObject != null)
+            return true;
+        return false;
     }
 }

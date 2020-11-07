@@ -1,17 +1,26 @@
-﻿using UnityEngine;
-
+﻿using Boo.Lang;
+using UnityEngine;
 public class StarConnector : MonoBehaviour
 {
-    public GameObject firstStar;
-    public GameObject secondStar;
-    LineRenderer lineRenderer;
-    private void Start()
+    public GameObject[] lines;
+    public GameObject linePrefab;
+    private List<GameObject> lineRenderers = new List<GameObject>();
+    private void Awake()
     {
-        lineRenderer = GetComponent<LineRenderer>();
+        foreach (GameObject line in lines)
+        {
+            GameObject obj = Instantiate(linePrefab);
+            lineRenderers.Add(obj);
+            obj.GetComponent<LineScript>().SetPoints(GetComponent<StarDropZone>().GetStarPosition(), line.GetComponent<StarDropZone>().GetStarPosition());
 
-        lineRenderer.SetPosition(0, firstStar.transform.position);
+        }
+    }
 
-        lineRenderer.SetPosition(1, secondStar.transform.position);
-
+    public void SetLineRendererState(bool state)
+    {
+        foreach (GameObject line in lineRenderers)
+        {
+            line.GetComponent<LineRenderer>().enabled = state;
+        }
     }
 }
