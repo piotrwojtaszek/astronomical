@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StarDropZone : MonoBehaviour
 {
+    [SerializeField]
     private Transform interactableObject = null;
     public Transform socetInteractor;
     private MeshRenderer meshRenderer;
@@ -19,10 +20,13 @@ public class StarDropZone : MonoBehaviour
         if (interactableObject != null)
         {
             starConnector.SetLineRendererState(true);
-            UpdateSocetPosition();
+            starConnector.SetOriginPoint(interactableObject);
+            if (!interactableObject.GetComponent<Rigidbody>().isKinematic)
+                UpdateSocetPosition();
         }
         else
         {
+            starConnector.SetOriginPoint(socetInteractor);
             ResetSocketPosition();
             starConnector.SetLineRendererState(false);
         }
@@ -67,6 +71,8 @@ public class StarDropZone : MonoBehaviour
 
     public Transform GetStarPosition()
     {
+        if (interactableObject)
+            return interactableObject;
         return socetInteractor;
     }
 

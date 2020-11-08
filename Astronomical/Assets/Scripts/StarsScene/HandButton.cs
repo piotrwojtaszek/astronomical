@@ -14,14 +14,14 @@ public class HandButton : XRBaseInteractable
     protected override void Awake()
     {
         base.Awake();
-        onHoverEnter.AddListener(StartPress);
-        onHoverExit.AddListener(EndPress);
+        onHoverEntered.AddListener(StartPress);
+        onHoverExited.AddListener(EndPress);
     }
 
     private void OnDestroy()
     {
-        onHoverEnter.RemoveListener(StartPress);
-        onHoverExit.RemoveListener(EndPress);
+        onHoverEntered.RemoveListener(StartPress);
+        onHoverExited.RemoveListener(EndPress);
     }
 
     private void StartPress(XRBaseInteractor interactor)

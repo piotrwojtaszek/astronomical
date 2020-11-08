@@ -1,4 +1,5 @@
-﻿using Boo.Lang;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 public class StarConnector : MonoBehaviour
 {
@@ -20,7 +21,15 @@ public class StarConnector : MonoBehaviour
     {
         foreach (GameObject line in lineRenderers)
         {
-            line.GetComponent<LineRenderer>().enabled = state;
+            line.GetComponent<LineScript>().isActive = state;
+        }
+    }
+
+    public void SetOriginPoint(Transform _origin)
+    {
+        foreach (GameObject line in lineRenderers)
+        {
+            line.GetComponent<LineScript>().SetOriginPoint(_origin);
         }
     }
 }

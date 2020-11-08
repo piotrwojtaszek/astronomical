@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LineScript : MonoBehaviour
 {
-    private Transform origin;
-    private Transform destination;
+    private Transform origin = null;
+    private Transform destination = null;
     private Vector3 oldOrigin;
     private Vector3 oldDestination;
     public bool isActive = true;
@@ -28,11 +28,18 @@ public class LineScript : MonoBehaviour
             lineRenderer.SetPosition(1, destination.position);
             oldOrigin = destination.position;
         }
+
+
     }
 
     public void SetPoints(Transform _origin, Transform _destination)
     {
         origin = _origin;
         destination = _destination;
+    }
+
+    public void SetOriginPoint(Transform _origin)
+    {
+        origin = _origin;
     }
 }

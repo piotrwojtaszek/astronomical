@@ -11,14 +11,14 @@ public class HandHider : MonoBehaviour
         meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
         interactor = GetComponent<XRDirectInteractor>();
 
-        interactor.onHoverEnter.AddListener(Hide);
-        interactor.onHoverExit.AddListener(Show);
+        interactor.onHoverEntered.AddListener(Hide);
+        interactor.onHoverExited.AddListener(Show);
     }
 
     private void OnDestroy()
     {
-        interactor.onHoverEnter.RemoveListener(Hide);
-        interactor.onHoverExit.RemoveListener(Show);
+        interactor.onHoverEntered.RemoveListener(Hide);
+        interactor.onHoverExited.RemoveListener(Show);
     }
 
     private void Show(XRBaseInteractable interactable)
