@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8609438874519670865}
   - component: {fileID: 8609438874519670870}
   - component: {fileID: 5971761478849211352}
+  - component: {fileID: -8612891173647280452}
   m_Layer: 8
   m_Name: Star
   m_TagString: Interactable
@@ -155,6 +156,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -8612891173647280452}
+        m_MethodName: SelectEnter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSelectExited:
     m_PersistentCalls:
       m_Calls:
@@ -164,6 +176,17 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -8612891173647280452}
+        m_MethodName: SelectExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -224,3 +247,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectMaterial: {fileID: 2100000, guid: 867c44acf63499a43a9e3fe13ce1e265, type: 2}
+--- !u!114 &-8612891173647280452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8609438874519670871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335e93506588d38459bd3a46277086d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  picked: 0
