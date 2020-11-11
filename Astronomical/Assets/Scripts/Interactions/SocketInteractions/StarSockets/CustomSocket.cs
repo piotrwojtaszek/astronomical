@@ -1,42 +1,50 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
-public class CustomSocket : MonoBehaviour
+public class CustomSocket : XRSocketInteractor
 {
-    ObjectsInfo interactable = null;
-    [SerializeField]
-    Transform socket;
-    // Start is called before the first frame update
-    void Start()
-    {
+    Transform star;
+    private IEnumerator coroutine;
 
-    }
-
-    // Update is called once per frame
-    void Update()
+    /*private void OnTriggerEnter(Collider other)
     {
-        if (interactable && !interactable.picked)
+        if (other.CompareTag("Interactable") && other.GetComponent<ObjectsInfo>() && interactable == null)
         {
-            socket.position = interactable.transform.position;
+            interactable.onSelectEnter(this);
         }
+    }*/
 
-    }
-
-    private void OnTriggerEnter(Collider other)
+    /* private void OnTriggerExit(Collider other)
+     {
+         if (other.CompareTag("Interactable") && other.transform == interactable)
+         {
+             interactable.picked = false;
+             interactable = null;
+         }
+     }*/
+    protected override void OnHoverEntered(XRBaseInteractable interactable)
     {
-        if (other.CompareTag("Interactable") && other.GetComponent<ObjectsInfo>())
+        base.OnHoverEntered(interactable);
+        star = interactable.transform;
+        attachTransform.position = star.position;
+        coroutine = UpdateAttachTransform();
+        StartCoroutine(coroutine);
+    }
+    protected override void OnHoverExited(XRBaseInteractable interactable)
+    {
+        base.OnHoverExited(interactable);
+        StopCoroutine(coroutine);
+    }
+
+    IEnumerator UpdateAttachTransform()
+    {
+        while (star != null)
         {
-            interactable = other.GetComponent<ObjectsInfo>();
-            socket.position = interactable.transform.position;
+            yield return new WaitForSeconds(0.05f);
+            attachTransform.position = star.position;
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Interactable"))
-        {
-            interactable = null;
-        }
-    }
 }
