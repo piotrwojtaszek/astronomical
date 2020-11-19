@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class ConsteletionManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public List<LineScript> connectionLines = null;
+
+    public List<Connection> connectionPoints;
+    public void CreateConnections()
     {
-        
+        foreach (Connection point in connectionPoints)
+        {
+            CreateLine(point.pos1, point.pos2);
+        }
+    }
+    void CreateLine(CustomSocket pos1, CustomSocket pos2)
+    {
+        GameObject obj = Resources.Load<GameObject>("Lines/ConstelationLine");
+        Instantiate(obj, transform.GetChild(transform.GetChildCount()-1).transform);
+        LineScript line = obj.GetComponent<LineScript>();
+        line.SetPoints(pos1, pos2);
+        connectionLines.Add(line);
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ClearLinesList()
     {
-        
+        connectionLines.Clear();
     }
+}
+[System.Serializable]
+public class Connection
+{
+    public CustomSocket pos1;
+    public CustomSocket pos2;
 }

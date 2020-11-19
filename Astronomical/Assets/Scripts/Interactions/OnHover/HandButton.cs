@@ -18,7 +18,7 @@ public class HandButton : XRBaseInteractable
         onHoverExited.AddListener(EndPress);
     }
 
-    private void OnDestroy()
+    protected override void OnDestroy()
     {
         onHoverEntered.RemoveListener(StartPress);
         onHoverExited.RemoveListener(EndPress);

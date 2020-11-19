@@ -8,22 +8,6 @@ public class CustomSocket : XRSocketInteractor
     Transform star;
     private IEnumerator coroutine;
 
-    /*private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Interactable") && other.GetComponent<ObjectsInfo>() && interactable == null)
-        {
-            interactable.onSelectEnter(this);
-        }
-    }*/
-
-    /* private void OnTriggerExit(Collider other)
-     {
-         if (other.CompareTag("Interactable") && other.transform == interactable)
-         {
-             interactable.picked = false;
-             interactable = null;
-         }
-     }*/
     protected override void OnHoverEntered(XRBaseInteractable interactable)
     {
         base.OnHoverEntered(interactable);
@@ -46,5 +30,4 @@ public class CustomSocket : XRSocketInteractor
             attachTransform.position = star.position;
         }
     }
-
 }

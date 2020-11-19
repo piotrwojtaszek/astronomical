@@ -5,10 +5,10 @@ using UnityEngine;
 public class PrefabSpawner : MonoBehaviour
 {
     [SerializeField]
-    Transform m_spawnPoint;
+    Transform m_spawnPoint = null;
 
     [SerializeField]
-    private GameObject m_prefabs;
+    private GameObject m_prefabs = null;
     bool isRunning = false;
 
     public void OnPress()

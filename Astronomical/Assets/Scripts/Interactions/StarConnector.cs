@@ -12,7 +12,7 @@ public class StarConnector : MonoBehaviour
         {
             GameObject obj = Instantiate(linePrefab);
             lineRenderers.Add(obj);
-            obj.GetComponent<LineScript>().SetPoints(GetComponent<StarDropZone>().GetStarPosition(), line.GetComponent<StarDropZone>().GetStarPosition());
+            //obj.GetComponent<LineScript>().SetPoints(GetComponent<StarDropZone>().GetStarPosition(), line.GetComponent<StarDropZone>().GetStarPosition());
 
         }
     }
@@ -21,7 +21,7 @@ public class StarConnector : MonoBehaviour
     {
         foreach (GameObject line in lineRenderers)
         {
-            line.GetComponent<LineScript>().isActive = state;
+            // line.GetComponent<LineScript>().isActive = state;
         }
     }
 
@@ -29,7 +29,7 @@ public class StarConnector : MonoBehaviour
     {
         foreach (GameObject line in lineRenderers)
         {
-            line.GetComponent<LineScript>().SetOriginPoint(_origin);
+            //line.GetComponent<LineScript>().SetOriginPoint(_origin);
         }
     }
 }

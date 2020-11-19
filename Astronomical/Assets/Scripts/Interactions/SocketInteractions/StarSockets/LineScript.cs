@@ -4,42 +4,20 @@ using UnityEngine;
 
 public class LineScript : MonoBehaviour
 {
-    private Transform origin = null;
-    private Transform destination = null;
-    private Vector3 oldOrigin;
-    private Vector3 oldDestination;
-    public bool isActive = true;
-    LineRenderer lineRenderer;
-    void Start()
+    private CustomSocket pos1 = null;
+    private CustomSocket pos2 = null;
+    public LineRenderer lineRenderer;
+
+    public void UpdateLine()
     {
-        lineRenderer = GetComponent<LineRenderer>();
+        lineRenderer.SetPosition(0, pos1.attachTransform.position);
+        lineRenderer.SetPosition(1, pos2.attachTransform.position);
     }
 
-    void Update()
+    public void SetPoints(CustomSocket _pos1, CustomSocket _pos2)
     {
-        lineRenderer.enabled = isActive;
-        if (origin.position != oldOrigin)
-        {
-            lineRenderer.SetPosition(0, origin.position);
-            oldOrigin = origin.position;
-        }
-        if (destination.position != oldDestination)
-        {
-            lineRenderer.SetPosition(1, destination.position);
-            oldOrigin = destination.position;
-        }
-
-
-    }
-
-    public void SetPoints(Transform _origin, Transform _destination)
-    {
-        origin = _origin;
-        destination = _destination;
-    }
-
-    public void SetOriginPoint(Transform _origin)
-    {
-        origin = _origin;
+        pos1 = _pos1;
+        pos2 = _pos2;
+        UpdateLine();
     }
 }
