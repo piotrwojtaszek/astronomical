@@ -15,6 +15,11 @@ public class ConstelationEditor : Editor
         }
         if (GUILayout.Button("ClearLines"))
         {
+            foreach (Transform element in socket.transform.GetChild(socket.transform.childCount - 1).transform)
+            {
+                element.name = "DestroyMe";
+            }
+            socket.ClearLinesList();
             Debug.Log("CLEAING");
         }
         GUILayout.EndHorizontal();

@@ -7,6 +7,7 @@ public class CustomSocket : XRSocketInteractor
 {
     Transform star;
     private IEnumerator coroutine;
+    public bool isMoving;
 
     protected override void OnHoverEntered(XRBaseInteractable interactable)
     {
@@ -26,6 +27,7 @@ public class CustomSocket : XRSocketInteractor
     {
         while (star != null)
         {
+            isMoving = true;
             yield return new WaitForSeconds(0.05f);
             attachTransform.position = star.position;
         }
