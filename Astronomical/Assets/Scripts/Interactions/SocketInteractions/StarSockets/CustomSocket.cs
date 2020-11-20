@@ -5,31 +5,42 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class CustomSocket : XRSocketInteractor
 {
-    Transform star;
-    private IEnumerator coroutine;
-    public bool isMoving;
-
-    protected override void OnHoverEntered(XRBaseInteractable interactable)
+    public Transform star;
+    public bool isFilled=false;
+    ParticleSystem particle;
+    protected override void Start()
     {
-        base.OnHoverEntered(interactable);
+        base.Start();
+        CreateParticle();
+    }
+    protected override void OnSelectEntered(XRBaseInteractable interactable)
+    {
+        base.OnSelectEntered(interactable);
         star = interactable.transform;
-        attachTransform.position = star.position;
-        coroutine = UpdateAttachTransform();
-        StartCoroutine(coroutine);
+        isFilled = true;
+        if (particle != null)
+            Destroy(particle);
+        CreateCompleteParticle();
     }
-    protected override void OnHoverExited(XRBaseInteractable interactable)
+    protected override void OnSelectExiting(XRBaseInteractable interactable)
     {
-        base.OnHoverExited(interactable);
-        StopCoroutine(coroutine);
+        base.OnSelectExiting(interactable);
+        star = transform;
+        isFilled = false;
+        CreateParticle();
     }
 
-    IEnumerator UpdateAttachTransform()
+    void CreateParticle()
     {
-        while (star != null)
-        {
-            isMoving = true;
-            yield return new WaitForSeconds(0.05f);
-            attachTransform.position = star.position;
-        }
+        ParticleSystem particleSystem = Resources.Load<ParticleSystem>("Particle/EmptySocketParticle");
+        particle = Instantiate(particleSystem);
+        particle.transform.position = transform.position;
+    }
+
+    void CreateCompleteParticle()
+    {
+        ParticleSystem particleSystem = Resources.Load<ParticleSystem>("Particle/CompletedSocket");
+        ParticleSystem obj = Instantiate(particleSystem);
+        obj.transform.position = transform.position;
     }
 }

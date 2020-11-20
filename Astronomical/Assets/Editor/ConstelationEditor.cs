@@ -8,12 +8,12 @@ public class ConstelationEditor : Editor
         base.OnInspectorGUI();
         ConsteletionManager socket = (ConsteletionManager)target;
         GUILayout.BeginHorizontal();
-        if (GUILayout.Button("CreateLink"))
+        if (GUILayout.Button("Create Link"))
         {
             socket.CreateConnections();
             Debug.Log("LINKING");
         }
-        if (GUILayout.Button("ClearLines"))
+        if (GUILayout.Button("Clear Lines"))
         {
             foreach (Transform element in socket.transform.GetChild(socket.transform.childCount - 1).transform)
             {

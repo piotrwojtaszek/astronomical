@@ -50,7 +50,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c004d3aedff693342b4ec24815e7895a, type: 2}
+  - {fileID: 2100000, guid: 636927ae8bc5d484a915bc385c27a4d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -72,11 +72,11 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0.6065786, y: 1.4106987, z: 2.5}
-  - {x: 1.1055787, y: 1.6606987, z: 2.5}
+  - {x: 0.49357843, y: 1.3396986, z: 2.5}
+  - {x: 0.75657845, y: 1.4956986, z: 2.5}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.03
+    widthMultiplier: 0.01
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -94,7 +94,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 0}
       key1: {r: 1, g: 1, b: 1, a: 0}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -122,7 +122,7 @@ LineRenderer:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
-    numCapVertices: 6
+    numCapVertices: 14
     alignment: 0
     textureMode: 0
     shadowBias: 0.5
