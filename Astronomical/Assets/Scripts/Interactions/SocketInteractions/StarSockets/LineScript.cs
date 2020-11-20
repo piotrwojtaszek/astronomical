@@ -5,10 +5,10 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class LineScript : MonoBehaviour
 {
-    [SerializeField]
-    private CustomSocket pos1 = null;
-    [SerializeField]
-    private CustomSocket pos2 = null;
+
+    public CustomSocket pos1 = null;
+
+    public CustomSocket pos2 = null;
     public LineRenderer lineRenderer;
     private Color32 startColor;
     private Color32 endColor;
@@ -59,5 +59,12 @@ public class LineScript : MonoBehaviour
     {
         UpdateColors();
         UpdatePositions();
+    }
+
+    private void OnDrawGizmos()
+    {
+
+        Gizmos.DrawLine(pos1.transform.position, pos2.transform.position);
+
     }
 }
