@@ -22,8 +22,8 @@ public class PlanetsOrbits : MonoBehaviour
     void Update()
     {
         angle += calculatedSpeed * Time.deltaTime;
-        x = Mathf.Cos(angle) * a + centrum.transform.position.x; // a is the Radius in the x direction
-        z = Mathf.Sin(angle) * b + centrum.transform.position.z; // b is the  Radius in the z direction
+        x = Mathf.Cos(angle) * a * transform.lossyScale.x + centrum.transform.position.x; // a is the Radius in the x direction
+        z = Mathf.Sin(angle) * b * transform.lossyScale.x + centrum.transform.position.z; // b is the  Radius in the z direction
         transform.position = new Vector3(x, 0 + transform.position.y, z);
     }
 }

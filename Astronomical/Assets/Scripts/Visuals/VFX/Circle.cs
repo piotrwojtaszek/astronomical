@@ -6,10 +6,11 @@ public class Circle : MonoBehaviour
     public float xradius;
     public float yradius;
     LineRenderer line;
+    private float multiplier = 1f;
     void Start()
     {
         line = gameObject.GetComponent<LineRenderer>();
-
+        multiplier = line.widthMultiplier;
         line.positionCount = segments + 1;
         line.useWorldSpace = false;
         CreatePoints();
@@ -33,5 +34,10 @@ public class Circle : MonoBehaviour
 
             angle += (360f / segments);
         }
+    }
+
+    private void Update()
+    {
+        line.widthMultiplier = multiplier * transform.lossyScale.x;
     }
 }

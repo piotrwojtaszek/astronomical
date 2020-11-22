@@ -163,7 +163,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 692814330}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!120 &162987516
 LineRenderer:
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b354064ca0142142b5e091f11826c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  segments: 100
+  segments: 150
   xradius: 13
   yradius: 13
 --- !u!1 &187054652
@@ -448,7 +448,7 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
+  scalingMode: 0
   randomSeed: 0
   InitialModule:
     serializedVersion: 3
@@ -1013,7 +1013,7 @@ ParticleSystem:
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 0
+    radiusThickness: 0.27
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -5102,7 +5102,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 692814330}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!120 &555020210
 LineRenderer:
@@ -5213,7 +5213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b354064ca0142142b5e091f11826c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  segments: 100
+  segments: 120
   xradius: 4.3
   yradius: 4.3
 --- !u!1 &602796397
@@ -5277,16 +5277,15 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.443, z: 2.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1587076050}
   - {fileID: 1547284344}
   - {fileID: 1989978066}
   - {fileID: 1352800076}
   - {fileID: 555020209}
   - {fileID: 162987515}
-  - {fileID: 1587076050}
   - {fileID: 1693122473}
   - {fileID: 1769320996}
   - {fileID: 1483165265}
-  - {fileID: 1353332614}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5535,7 +5534,7 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
+  scalingMode: 0
   randomSeed: 0
   InitialModule:
     serializedVersion: 3
@@ -10157,7 +10156,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 692814330}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!120 &1352800077
 LineRenderer:
@@ -10331,11 +10330,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353332611}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.443, z: -2.19}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 692814330}
-  m_RootOrder: 9
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1364485948 stripped
 Transform:
@@ -10518,7 +10517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b354064ca0142142b5e091f11826c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  segments: 100
+  segments: 300
   xradius: 81.12
   yradius: 81.12
 --- !u!1 &1547284343
@@ -10551,7 +10550,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 692814330}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!120 &1547284345
 LineRenderer:
@@ -10662,7 +10661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b354064ca0142142b5e091f11826c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  segments: 100
+  segments: 60
   xradius: 1
   yradius: 1
 --- !u!1 &1587076049
@@ -10694,7 +10693,7 @@ Transform:
   m_Children:
   - {fileID: 393529297}
   m_Father: {fileID: 692814330}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1693122472
 GameObject:
@@ -10837,7 +10836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b354064ca0142142b5e091f11826c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  segments: 100
+  segments: 200
   xradius: 26
   yradius: 26
 --- !u!1 &1710323610
@@ -11024,7 +11023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b354064ca0142142b5e091f11826c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  segments: 100
+  segments: 250
   xradius: 52
   yradius: 52
 --- !u!1 &1986620088 stripped
@@ -11098,7 +11097,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 692814330}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!120 &1989978067
 LineRenderer:
@@ -11209,7 +11208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b354064ca0142142b5e091f11826c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  segments: 100
+  segments: 80
   xradius: 2
   yradius: 2
 --- !u!1 &2051735389
@@ -11383,7 +11382,7 @@ ParticleSystem:
       m_RotationOrder: 4
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
-  scalingMode: 1
+  scalingMode: 0
   randomSeed: 0
   InitialModule:
     serializedVersion: 3
@@ -16138,6 +16137,11 @@ PrefabInstance:
       propertyPath: centrum
       value: 
       objectReference: {fileID: 3514794626362352143}
+    - target: {fileID: 8798765643689166342, guid: a2dd11c5fc5d2544c84f4340cbb76bf1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2dd11c5fc5d2544c84f4340cbb76bf1, type: 3}
 --- !u!4 &2041875154832872403 stripped
