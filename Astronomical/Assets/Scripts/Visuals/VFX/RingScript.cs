@@ -29,6 +29,7 @@ public class RingScript : MonoBehaviour
             GameObject obj = Instantiate(prefab);
             Vector3 pos = transform.position;
             obj.transform.position = pos + new Vector3(x, y, z);
+            obj.transform.eulerAngles = new Vector3(obj.transform.eulerAngles.x, obj.transform.eulerAngles.y, 90f - angle);
             angle += (360f / segments);
         }
     }
