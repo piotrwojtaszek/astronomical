@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlanetsOrbits : MonoBehaviour
 {
-    private Transform centrum;
     public float a = 1f; //a is in AU, Semimajor Axis
     private float angle; // angle theta
     [Tooltip("Ile sekund zajmuje pelen obrot")]
@@ -16,14 +15,14 @@ public class PlanetsOrbits : MonoBehaviour
     public float b = 1f;
     private void Start()
     {
-        centrum = transform.parent;
-        calculatedSpeed = (2 * Mathf.PI) / speed;
+
     }
     void Update()
     {
+        calculatedSpeed = (2 * Mathf.PI) / speed;
         angle += calculatedSpeed * Time.deltaTime;
-        x = Mathf.Cos(angle) * a * transform.lossyScale.x + centrum.transform.position.x; // a is the Radius in the x direction
-        z = Mathf.Sin(angle) * b * transform.lossyScale.x + centrum.transform.position.z; // b is the  Radius in the z direction
+        x = Mathf.Cos(angle) * a * transform.lossyScale.x + SolarSystem.Instance.transform.position.x; // a is the Radius in the x direction
+        z = Mathf.Sin(angle) * b * transform.lossyScale.x + SolarSystem.Instance.transform.position.z; // b is the  Radius in the z direction
         transform.position = new Vector3(x, 0 + transform.position.y, z);
     }
 }

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24bf6b1775d5cea4987fd8f5a3cde938, type: 3}
+  m_Name: Mercury
+  m_EditorClassIdentifier: 
+  name: Merkury
+  scale: 0.383
+  distanceA: 0.387
+  distanceB: 0.387
+  speed: 4.2
+  mass: 0.0553
+  description: []
+  graphic: {fileID: 6464188746472920280, guid: 9fe9f421c8f5ae145b965a29e9b4f5b8, type: 3}

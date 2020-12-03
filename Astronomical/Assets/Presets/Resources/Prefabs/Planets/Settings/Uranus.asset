@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24bf6b1775d5cea4987fd8f5a3cde938, type: 3}
+  m_Name: Uranus
+  m_EditorClassIdentifier: 
+  name: Uran
+  scale: 4.01
+  distanceA: 19.2
+  distanceB: 19.2
+  speed: 0.012
+  mass: 14.5
+  description: []
+  graphic: {fileID: 4514144735316179604, guid: df8ea07f727b58e4087810539847cdc6, type: 3}
