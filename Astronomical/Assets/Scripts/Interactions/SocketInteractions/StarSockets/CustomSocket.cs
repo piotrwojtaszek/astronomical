@@ -32,14 +32,14 @@ public class CustomSocket : XRSocketInteractor
 
     void CreateParticle()
     {
-        ParticleSystem particleSystem = Resources.Load<ParticleSystem>("Particle/EmptySocketParticle");
+        ParticleSystem particleSystem = Resources.Load<ParticleSystem>("Prefabs/Others/EmptySocketParticle");
         particle = Instantiate(particleSystem);
         particle.transform.position = transform.position;
     }
 
     void CreateCompleteParticle()
     {
-        ParticleSystem particleSystem = Resources.Load<ParticleSystem>("Particle/CompletedSocket");
+        ParticleSystem particleSystem = Resources.Load<ParticleSystem>("Prefabs/Others/CompletedSocket");
         ParticleSystem obj = Instantiate(particleSystem);
         obj.transform.position = transform.position;
     }
