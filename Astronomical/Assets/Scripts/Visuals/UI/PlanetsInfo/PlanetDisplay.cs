@@ -26,9 +26,7 @@ public class PlanetDisplay : MonoBehaviour
         orbits.a = planetDetails.distanceA * SolarSystem.Instance.earthOrbitDistance;
         orbits.b = planetDetails.distanceB * SolarSystem.Instance.earthOrbitDistance;
         float scale = SolarSystem.Instance.earthScale * planetDetails.scale;
-        //scale = Mathf.Clamp(scale, 1f, 5f);
         hoverPanel.localScale = oldInfoScale * scale;
         planet.transform.localScale = Vector3.one * SolarSystem.Instance.earthScale * planetDetails.scale;
     }
 }
-//jesli ziemia potrzebuje 60 sekund na obiegniecie slona to jesli mars porusza sie wolniej to 60/0.53 

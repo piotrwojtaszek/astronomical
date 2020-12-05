@@ -6,11 +6,11 @@ using UnityEngine;
 public class PlanetDetailInfo : MonoBehaviour
 {
     [SerializeField]
-    SPlanetInfo detail;
+    SPlanetInfo detail = null;
     [SerializeField]
-    TextMeshProUGUI nameField;
+    TextMeshProUGUI nameField = null;
     [SerializeField]
-    TextMeshProUGUI descriptionField;
+    TextMeshProUGUI descriptionField = null;
     private void Start()
     {
         nameField.text = detail.name;
