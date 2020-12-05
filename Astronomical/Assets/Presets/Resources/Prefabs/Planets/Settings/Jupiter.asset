@@ -18,5 +18,14 @@ MonoBehaviour:
   distanceB: 5.2
   speed: 0.084
   mass: 317.8
-  description: []
+  description:
+  - "Pi\u0105ta w kolejno\u015Bci od S\u0142o\u0144ca i najwi\u0119ksza planeta Uk\u0142adu
+    S\u0142onecznego. Masa Jowisza jest nieco mniejsza ni\u017C jedna tysi\u0119czna
+    masy S\u0142o\u0144ca, a zarazem dwa i p\xF3\u0142 razy wi\u0119ksza ni\u017C
+    \u0142\u0105czna masa pozosta\u0142ych planet w Uk\u0142adzie S\u0142onecznym."
+  - 
+  - "Promie\u0144: 69 911 km"
+  - "Powierzchnia: 6,142E10 km\xB2"
+  - "Odleg\u0142o\u015B\u0107 od S\u0142o\u0144ca: 778 500 000 km"
+  - "Si\u0142a ci\u0119\u017Cko\u015Bci: 24,79 m/s\xB2"
   graphic: {fileID: 3962609309533088550, guid: 6c3e3808d539c8b428656850548a8533, type: 3}

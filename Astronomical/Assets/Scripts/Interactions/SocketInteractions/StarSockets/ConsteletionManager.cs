@@ -16,7 +16,7 @@ public class ConsteletionManager : MonoBehaviour
     }
     void CreateLine(CustomSocket pos1, CustomSocket pos2)
     {
-        GameObject obj = Resources.Load<GameObject>("Lines/ConstelationLine");
+        GameObject obj = Resources.Load<GameObject>("Prefabs/Others/ConstelationLine");
         Instantiate(obj, transform.GetChild(transform.childCount - 1).transform);
         LineScript line = obj.GetComponent<LineScript>();
         line.SetPoints(pos1, pos2);

@@ -18,5 +18,13 @@ MonoBehaviour:
   distanceB: 9.58
   speed: 0.034
   mass: 95.2
-  description: []
+  description:
+  - "Gazowy olbrzym, sz\xF3sta planeta Uk\u0142adu S\u0142onecznego pod wzgl\u0119dem
+    odleg\u0142o\u015Bci od S\u0142o\u0144ca, druga po Jowiszu pod wzgl\u0119dem
+    masy i wielko\u015Bci."
+  - 
+  - "Odleg\u0142o\u015B\u0107 od S\u0142o\u0144ca: 1,434E9 km"
+  - "Promie\u0144: 58 232 km"
+  - "Powierzchnia: 4,27E10 km\xB2"
+  - "Si\u0142a ci\u0119\u017Cko\u015Bci: 10,44 m/s\xB2"
   graphic: {fileID: 98626505549688485, guid: c792608b7f91a2047bb82fae5934b3be, type: 3}

@@ -14,6 +14,13 @@ public class PlanetDetailInfo : MonoBehaviour
     private void Start()
     {
         nameField.text = detail.name;
-        descriptionField.text = detail.description[0];
+        descriptionField.text = "";
+        int i = 0;
+        foreach (string info in detail.description)
+        {
+            descriptionField.text += detail.description[i] + '\n';
+            i++;
+        }
+
     }
 }

@@ -29,5 +29,10 @@ MonoBehaviour:
     i wielu innych cia\u0142 Uk\u0142adu S\u0142onecznego. Wyst\u0119puj\u0105 na
     nim r\xF3\u017Cne rodzaje terenu, podobne do ziemskich: wulkany, doliny, kaniony,
     pustynie i polarne czapy lodowe. "
-  - "D\u0142ugo\u015B\u0107 dnia:  ile\u015B godzin np 18 godzin"
+  - 
+  - "Si\u0142a ci\u0119\u017Cko\u015Bci: 3,711 m/s\xB2"
+  - "Powierzchnia: 144 800 000 km\xB2\r"
+  - "Promie\u0144: 3 389,5 km\r"
+  - "Ksi\u0119\u017Cyce: Fobos, Deimos"
+  - "D\u0142ugo\u015B\u0107 dnia: 1d 0g 37m"
   graphic: {fileID: 3653584270665357992, guid: 4ed18601b00ef6643a229dc94b920970, type: 3}

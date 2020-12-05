@@ -18,5 +18,15 @@ MonoBehaviour:
   distanceB: 0.387
   speed: 4.2
   mass: 0.0553
-  description: []
+  description:
+  - "Najmniejsza i najbli\u017Csza S\u0142o\u0144ca planeta Uk\u0142adu S\u0142onecznego.
+    Jako planeta dolna znajduje si\u0119 dla ziemskiego obserwatora zawsze blisko
+    S\u0142o\u0144ca, dlatego jest trudna do obserwacji. Mimo to nale\u017Cy do planet
+    widocznych go\u0142ym okiem i by\u0142a znana ju\u017C w staro\u017Cytno\u015Bci."
+  - 
+  - "Promie\u0144: 2 439,7 km"
+  - "Odleg\u0142o\u015B\u0107 od S\u0142o\u0144ca: 57 910 000 km"
+  - "Powierzchnia: 74 800 000 km\xB2"
+  - "D\u0142ugo\u015B\u0107 dnia: 58d 15g 30m"
+  - "Si\u0142a ci\u0119\u017Cko\u015Bci: 3,7 m/s\xB2"
   graphic: {fileID: 6464188746472920280, guid: 9fe9f421c8f5ae145b965a29e9b4f5b8, type: 3}

@@ -18,5 +18,15 @@ MonoBehaviour:
   distanceB: 30.05
   speed: 0.006
   mass: 17.1
-  description: []
+  description:
+  - "Gazowy olbrzym, \xF3sma, najdalsza od S\u0142o\u0144ca planeta w Uk\u0142adzie
+    S\u0142onecznym, czwarta pod wzgl\u0119dem \u015Brednicy i trzecia pod wzgl\u0119dem
+    masy. Neptun jest ponad 17 razy masywniejszy od Ziemi i troch\u0119 masywniejszy
+    od swojego bli\u017Aniaka, Urana, kt\xF3ry ma mas\u0119 prawie 15 razy wi\u0119ksz\u0105
+    od masy Ziemi."
+  - 
+  - "Promie\u0144: 24 622 km"
+  - "Odleg\u0142o\u015B\u0107 od S\u0142o\u0144ca: 4,495E9 km"
+  - "Powierzchnia: 7,618E9 km\xB2"
+  - 'Masa: 1,024E26 kg'
   graphic: {fileID: 8641409667879233644, guid: 7cf5072911e7b134b887412e4e2acf54, type: 3}

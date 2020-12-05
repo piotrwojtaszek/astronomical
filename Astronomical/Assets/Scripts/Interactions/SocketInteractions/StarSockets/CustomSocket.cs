@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class CustomSocket : XRSocketInteractor
 {
     public Transform star;
-    public bool isFilled=false;
+    public bool isFilled = false;
     ParticleSystem particle;
     protected override void Start()
     {
@@ -42,5 +43,10 @@ public class CustomSocket : XRSocketInteractor
         ParticleSystem particleSystem = Resources.Load<ParticleSystem>("Prefabs/Others/CompletedSocket");
         ParticleSystem obj = Instantiate(particleSystem);
         obj.transform.position = transform.position;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Handles.Label(transform.position, transform.name);
     }
 }

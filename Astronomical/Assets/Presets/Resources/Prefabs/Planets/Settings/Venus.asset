@@ -18,5 +18,16 @@ MonoBehaviour:
   distanceB: 0.723
   speed: 1.6
   mass: 0.815
-  description: []
+  description:
+  - "Druga pod wzgl\u0119dem odleg\u0142o\u015Bci od S\u0142o\u0144ca planeta Uk\u0142adu
+    S\u0142onecznego. Jest trzecim pod wzgl\u0119dem jasno\u015Bci cia\u0142em niebieskim
+    widocznym na niebie, po S\u0142o\u0144cu i Ksi\u0119\u017Cycu. Jej obserwowana
+    wielko\u015B\u0107 gwiazdowa si\u0119ga \u22124,6 i jest wystarczaj\u0105ca,
+    aby \u015Bwiat\u0142o odbite od Wenus powodowa\u0142o powstawanie cieni."
+  - 
+  - "Powierzchnia: 460 200 000 km\xB2"
+  - "Odleg\u0142o\u015B\u0107 od S\u0142o\u0144ca: 108 200 000 km"
+  - "Promie\u0144: 6 051,8 km"
+  - "D\u0142ugo\u015B\u0107 dnia: 116d 18g 0m"
+  - "Si\u0142a ci\u0119\u017Cko\u015Bci: 8,87 m/s\xB2"
   graphic: {fileID: 3996591785518020231, guid: 6774364f38dd1b643822e8e9ba741f98, type: 3}

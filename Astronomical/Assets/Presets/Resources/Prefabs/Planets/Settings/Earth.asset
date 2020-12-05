@@ -18,5 +18,15 @@ MonoBehaviour:
   distanceB: 1
   speed: 1
   mass: 1
-  description: []
+  description:
+  - "Trzecia, licz\u0105c od S\u0142o\u0144ca, oraz pi\u0105ta pod wzgl\u0119dem
+    wielko\u015Bci planeta Uk\u0142adu S\u0142onecznego. Pod wzgl\u0119dem \u015Brednicy,
+    masy i g\u0119sto\u015Bci jest to najwi\u0119ksza planeta skalista Uk\u0142adu
+    S\u0142onecznego. Ziemia jest zamieszkana przez miliony gatunk\xF3w, w tym przez
+    cz\u0142owieka. Jest jedynym znanym miejscem we Wszech\u015Bwiecie, w kt\xF3rym
+    wyst\u0119puje \u017Cycie. Wed\u0142ug danych zebranych metod\u0105 datowania
+    izotopowego, planeta uformowa\u0142a si\u0119 ok. 4,54 \xB1 0,05 mld lat temu."
+  - 
+  - "Promie\u0144: 6371km"
+  - "Pole powierzchni: 510 072 000 km\xB2"
   graphic: {fileID: 2225857010781936972, guid: 2fcef205f11a8d1498e2741e221903c0, type: 3}
