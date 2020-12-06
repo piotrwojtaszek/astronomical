@@ -7,16 +7,18 @@ public class PlanetDisplay : MonoBehaviour
 {
     public SPlanetInfo planetDetails;
     public TextMeshProUGUI hoverInfo;
-    public Transform hoverPanel;
+    public RectTransform hoverPanel;
     public PlanetsOrbits orbits;
     GameObject planet = null;
     Vector3 oldInfoScale;
+    Vector3 offset;
     private void Start()
     {
 
         planet = Instantiate(planetDetails.graphic, transform);
         hoverInfo.text = planetDetails.name;
         oldInfoScale = hoverPanel.localScale;
+
     }
 
     private void Update()
@@ -27,6 +29,7 @@ public class PlanetDisplay : MonoBehaviour
         orbits.b = planetDetails.distanceB * SolarSystem.Instance.earthOrbitDistance;
         float scale = SolarSystem.Instance.earthScale * planetDetails.scale;
         hoverPanel.localScale = oldInfoScale * scale;
+        hoverPanel.localPosition = Vector3.up * scale/3f;
         planet.transform.localScale = Vector3.one * SolarSystem.Instance.earthScale * planetDetails.scale;
     }
 }
