@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+/// <summary>
+/// This class is responsible for planet behaviour while orbits around sun
+/// </summary>
 public class PlanetDisplay : MonoBehaviour
 {
     public SPlanetInfo planetDetails;
