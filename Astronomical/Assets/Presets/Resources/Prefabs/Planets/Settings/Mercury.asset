@@ -30,3 +30,6 @@ MonoBehaviour:
   - "D\u0142ugo\u015B\u0107 dnia: 58d 15g 30m"
   - "Si\u0142a ci\u0119\u017Cko\u015Bci: 3,7 m/s\xB2"
   graphic: {fileID: 6464188746472920280, guid: 9fe9f421c8f5ae145b965a29e9b4f5b8, type: 3}
+  place: 1
+  tilt: 0
+  rotationSpeed: 175.9

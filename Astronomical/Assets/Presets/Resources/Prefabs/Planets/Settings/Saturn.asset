@@ -28,3 +28,6 @@ MonoBehaviour:
   - "Powierzchnia: 4,27E10 km\xB2"
   - "Si\u0142a ci\u0119\u017Cko\u015Bci: 10,44 m/s\xB2"
   graphic: {fileID: 98626505549688485, guid: c792608b7f91a2047bb82fae5934b3be, type: 3}
+  place: 6
+  tilt: 27
+  rotationSpeed: 0.444

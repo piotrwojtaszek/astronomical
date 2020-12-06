@@ -36,3 +36,6 @@ MonoBehaviour:
   - "Ksi\u0119\u017Cyce: Fobos, Deimos"
   - "D\u0142ugo\u015B\u0107 dnia: 1d 0g 37m"
   graphic: {fileID: 3653584270665357992, guid: 4ed18601b00ef6643a229dc94b920970, type: 3}
+  place: 4
+  tilt: 25
+  rotationSpeed: 1.03

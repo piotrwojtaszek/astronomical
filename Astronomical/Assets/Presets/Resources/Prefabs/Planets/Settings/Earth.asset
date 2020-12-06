@@ -30,3 +30,6 @@ MonoBehaviour:
   - "Promie\u0144: 6371km"
   - "Pole powierzchni: 510 072 000 km\xB2"
   graphic: {fileID: 2225857010781936972, guid: 2fcef205f11a8d1498e2741e221903c0, type: 3}
+  place: 3
+  tilt: 23
+  rotationSpeed: 1

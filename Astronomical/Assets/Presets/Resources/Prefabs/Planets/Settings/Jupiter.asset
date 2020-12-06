@@ -29,3 +29,6 @@ MonoBehaviour:
   - "Odleg\u0142o\u015B\u0107 od S\u0142o\u0144ca: 778 500 000 km"
   - "Si\u0142a ci\u0119\u017Cko\u015Bci: 24,79 m/s\xB2"
   graphic: {fileID: 3962609309533088550, guid: 6c3e3808d539c8b428656850548a8533, type: 3}
+  place: 5
+  tilt: 3
+  rotationSpeed: 0.414

@@ -30,3 +30,6 @@ MonoBehaviour:
   - "Powierzchnia: 7,618E9 km\xB2"
   - 'Masa: 1,024E26 kg'
   graphic: {fileID: 8641409667879233644, guid: 7cf5072911e7b134b887412e4e2acf54, type: 3}
+  place: 8
+  tilt: 28
+  rotationSpeed: 0.671

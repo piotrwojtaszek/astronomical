@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class SunScaleSetter : MonoBehaviour
 {
-    public float sunScale = 20f;
-
     // Update is called once per frame
     void Update()
     {
-        float scale = SolarSystem.Instance.earthScale * sunScale;
-        transform.localScale = Vector3.one * scale;
+        if(SolarSystem.Instance.mode==0)
+        {
+            float scale = SolarSystem.Instance.earthScale/4f * SolarSystem.Instance.sunSize;
+            transform.localScale = Vector3.one * scale;
+            return;
+        }
+        if (SolarSystem.Instance.mode == 1)
+        {
+            transform.localScale = Vector3.one* SolarSystem.Instance.sunSize;
+        }
     }
 }

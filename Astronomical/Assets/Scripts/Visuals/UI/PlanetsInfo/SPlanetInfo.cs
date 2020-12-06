@@ -12,4 +12,7 @@ public class SPlanetInfo : ScriptableObject
     [TextArea(2, 20)]
     public string[] description;
     public GameObject graphic;
+    public int place;
+    public float tilt;
+    public float rotationSpeed;
 }

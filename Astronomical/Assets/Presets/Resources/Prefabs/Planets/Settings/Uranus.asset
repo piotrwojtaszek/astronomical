@@ -28,3 +28,6 @@ MonoBehaviour:
   - "Odleg\u0142o\u015B\u0107 od S\u0142o\u0144ca: 2,871E9 km"
   - "Powierzchnia: 8,083E9 km\xB2"
   graphic: {fileID: 4514144735316179604, guid: df8ea07f727b58e4087810539847cdc6, type: 3}
+  place: 7
+  tilt: 98
+  rotationSpeed: -0.718

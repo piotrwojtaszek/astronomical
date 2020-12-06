@@ -10,6 +10,8 @@ public class SolarSystem : MonoBehaviour
     public float earthOrbitDistance = 1f;
     public float solarScale = 1f;
     public float solarSpeed = 1f;
+    public int mode = 0;
+    public float sunSize = 8f;
     private void Awake()
     {
         Instance = this;
