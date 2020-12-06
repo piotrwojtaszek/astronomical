@@ -449,12 +449,12 @@ PrefabInstance:
     - target: {fileID: 8669552888316515540, guid: 64533d54737bfaa4ebe8836c39081a4d,
         type: 3}
       propertyPath: earthOrbitDistance
-      value: 4
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8669552888316515540, guid: 64533d54737bfaa4ebe8836c39081a4d,
         type: 3}
       propertyPath: sunSize
-      value: 2
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8669552888316515541, guid: 64533d54737bfaa4ebe8836c39081a4d,
         type: 3}

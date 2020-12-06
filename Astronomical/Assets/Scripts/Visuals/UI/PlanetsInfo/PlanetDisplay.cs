@@ -47,6 +47,18 @@ public class PlanetDisplay : MonoBehaviour
             planet.transform.localScale = Vector3.one * SolarSystem.Instance.earthScale;
             return;
         }
+        if (SolarSystem.Instance.mode == 2)
+        {
+            if (SolarSystem.Instance.earthOrbitalPeriod != 0.0f)
+                orbits.speed = SolarSystem.Instance.earthOrbitalPeriod / planetDetails.speed * SolarSystem.Instance.solarSpeed;
+            orbits.a = planetDetails.place * SolarSystem.Instance.earthOrbitDistance;
+            orbits.b = planetDetails.place * SolarSystem.Instance.earthOrbitDistance;
+            float scale = SolarSystem.Instance.earthScale * planetDetails.scale;
+            hoverPanel.localScale = oldInfoScale * scale;
+            hoverPanel.localPosition = Vector3.up * scale / 3f;
+            planet.transform.localScale = Vector3.one * SolarSystem.Instance.earthScale * planetDetails.scale;
+            return;
+        }
 
     }
 }
