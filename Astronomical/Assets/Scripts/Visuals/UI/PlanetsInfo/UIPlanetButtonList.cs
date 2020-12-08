@@ -15,13 +15,20 @@ public class UIPlanetButtonList : MonoBehaviour
             text.text = planetValue.name;
         else
             Debug.LogWarning("No assigned planet");
-        GetComponent<Button>().onClick.AddListener(Click);
     }
     public void Click()
     {
-        if (planetValue != null)
-            infoController.Replace(planetValue);
+        if (!infoController.CompareActive(planetValue))
+        {
+            if (planetValue != null)
+                infoController.Replace(planetValue);
+            else
+                Debug.LogWarning("No assigned planet");
+            return;
+        }
         else
-            Debug.LogWarning("No assigned planet");
+            infoController.Clear();
     }
+
+
 }

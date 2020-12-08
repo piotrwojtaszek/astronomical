@@ -24,6 +24,15 @@ public class UIPlanetInfoController : MonoBehaviour
     [SerializeField]
     SPlanetInfo currentPlanet = null;
 
+    [SerializeField]
+    GameObject currentPlanetTransform;
+
+    [SerializeField]
+    GameObject listOfPlanets = null;
+
+    [SerializeField]
+    bool changePanelsSide = false;
+
     private void Awake()
     {
         foreach (SPlanetInfo info in planetInfos)
@@ -31,22 +40,31 @@ public class UIPlanetInfoController : MonoBehaviour
             GameObject pref = Instantiate(listButton, listContent);
             pref.GetComponent<UIPlanetButtonList>().planetValue = info;
             pref.GetComponent<UIPlanetButtonList>().infoController = this;
+        }
 
+        detailPanel.gameObject.SetActive(false);
+
+        if (changePanelsSide)
+        {
+            Vector3 temp = detailPanel.transform.position;
+            detailPanel.transform.position = listOfPlanets.transform.position;
+            listOfPlanets.transform.position = temp;
 
         }
     }
 
+
+
     /// <summary>
     /// Clear spawn point
     /// </summary>
-    void Clear()
+    public void Clear()
     {
         currentPlanet = null;
-        if (spawnPoint.childCount != 0)
-        {
-            Destroy(spawnPoint.GetChild(0).gameObject);
-            Debug.Log("Planeta została zniszczona");
-        }
+        Destroy(currentPlanetTransform);
+
+        Debug.Log("Planeta została zniszczona");
+
 
         //make sure its not empty
 
@@ -61,12 +79,10 @@ public class UIPlanetInfoController : MonoBehaviour
     /// </summary>
     public void Replace(SPlanetInfo newPlanet)
     {
-
         Clear();
-        Debug.Log(newPlanet.name);
         currentPlanet = newPlanet;
         detailPanel.UpdatePanel(currentPlanet);
-        Instantiate(currentPlanet.graphic, spawnPoint);
+        currentPlanetTransform = Instantiate(currentPlanet.graphic, spawnPoint);
 
         //make sure that scale is very small
 
@@ -79,6 +95,24 @@ public class UIPlanetInfoController : MonoBehaviour
         //now its ready to display informations
     }
 
+    void InfoPanel(bool state)
+    {
+        detailPanel.gameObject.SetActive(state);
+    }
 
-
+    /// <summary>
+    /// check if arg is equal to current active planet
+    /// </summary>
+    /// <param name="newPlanet"></param>
+    /// <returns>If equal return true else false</returns>
+    public bool CompareActive(SPlanetInfo newPlanet)
+    {
+        if (currentPlanet == null || newPlanet != currentPlanet)
+        {
+            InfoPanel(true);
+            return false;
+        }
+        InfoPanel(false);
+        return true;
+    }
 }
