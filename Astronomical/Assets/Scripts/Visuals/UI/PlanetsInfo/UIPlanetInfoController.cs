@@ -8,6 +8,12 @@ public class UIPlanetInfoController : MonoBehaviour
 {
     [SerializeField]
     Transform spawnPoint = null;
+    [SerializeField]
+    Transform closePos = null;
+    [SerializeField]
+    Transform centerPos = null;
+    [SerializeField]
+    Transform farPos = null;
 
     [SerializeField]
     List<SPlanetInfo> planetInfos = null;
@@ -24,7 +30,6 @@ public class UIPlanetInfoController : MonoBehaviour
     [SerializeField]
     SPlanetInfo currentPlanet = null;
 
-    [SerializeField]
     GameObject currentPlanetTransform;
 
     [SerializeField]
@@ -46,11 +51,14 @@ public class UIPlanetInfoController : MonoBehaviour
 
         if (changePanelsSide)
         {
-            Vector3 temp = detailPanel.transform.position;
-            detailPanel.transform.position = listOfPlanets.transform.position;
-            listOfPlanets.transform.position = temp;
-
+            Vector3 temp = farPos.position;
+            farPos.position = closePos.position;
+            closePos.position = temp;
         }
+
+        detailPanel.transform.position = closePos.position;
+        listOfPlanets.transform.position = farPos.position;
+
     }
 
 
@@ -83,7 +91,8 @@ public class UIPlanetInfoController : MonoBehaviour
         currentPlanet = newPlanet;
         detailPanel.UpdatePanel(currentPlanet);
         currentPlanetTransform = Instantiate(currentPlanet.graphic, spawnPoint);
-
+        currentPlanetTransform.transform.localScale = Vector3.one * 2f;
+        //currentPlanetTransform.transform.localScale = Vector3.one*currentPlanet.scale;
         //make sure that scale is very small
 
         //sign new planet to slot
