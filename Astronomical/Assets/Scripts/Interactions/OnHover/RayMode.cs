@@ -6,25 +6,50 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class RayMode : MonoBehaviour
 {
-    public XRController leftontroller;
-    public XRController rightontroller;
+    public XRController rayInteractor;
     public XRController teleportController;
-    // Update is called once per frame
+    [SerializeField]
+    InputDeviceCharacteristics deviceCharacteristics;
+    InputDevice targetDevice;
+
     void Update()
     {
-        if (leftontroller)
-            leftontroller.gameObject.SetActive(CheckIfActived(leftontroller));
-        if (rightontroller)
-            rightontroller.gameObject.SetActive(CheckIfActived(rightontroller));
-        List<InputDevice> inputDevices = new List<InputDevice>();
-        InputDeviceCharacteristics rightController = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
-        InputDeviceCharacteristics leftController = InputDeviceCharacteristics.Left| InputDeviceCharacteristics.Controller;
+        if (!targetDevice.isValid)
+        {
+            UpdateDevices();
+        }
+
+
+
+        rayInteractor.gameObject.SetActive(!CheckIfActived());
+        teleportController.gameObject.SetActive(CheckIfActived());
+
+
+
+
 
     }
 
-    public bool CheckIfActived(XRController controller)
+    public bool CheckIfActived()
     {
-        InputHelpers.IsPressed(controller.inputDevice, controller.selectUsage, out bool isActived, controller.axisToPressThreshold);
+        InputHelpers.IsPressed(targetDevice, InputHelpers.Button.PrimaryAxis2DUp, out bool isActived, 0.75f);
         return isActived;
+    }
+
+    void UpdateDevices()
+    {
+        List<InputDevice> inputDevices = new List<InputDevice>();
+        InputDeviceCharacteristics controllerCharacteristics = deviceCharacteristics | InputDeviceCharacteristics.Controller;
+        InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, inputDevices);
+
+        foreach (var item in inputDevices)
+        {
+            Debug.Log(item.name);
+        }
+
+        if (inputDevices.Count > 0)
+        {
+            targetDevice = inputDevices[0];
+        }
     }
 }
