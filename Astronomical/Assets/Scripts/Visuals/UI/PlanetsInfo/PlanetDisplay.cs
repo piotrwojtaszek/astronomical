@@ -26,6 +26,7 @@ public class PlanetDisplay : MonoBehaviour
     private void Update()
     {
         planet.transform.Rotate(transform.up, (Time.deltaTime / planetDetails.rotationSpeed) * SolarSystem.Instance.solarSpeed);
+        //ZŁOŻONY REALISTYCZNY
         if (SolarSystem.Instance.mode == 0)
         {
             if (SolarSystem.Instance.earthOrbitalPeriod != 0.0f)
@@ -38,6 +39,7 @@ public class PlanetDisplay : MonoBehaviour
             planet.transform.localScale = Vector3.one * SolarSystem.Instance.earthScale * planetDetails.scale;
             return;
         }
+        //SYMBOLICZNY UPROSZCZONY
         if (SolarSystem.Instance.mode == 1)
         {
             if (SolarSystem.Instance.earthOrbitalPeriod != 0.0f)
@@ -49,6 +51,7 @@ public class PlanetDisplay : MonoBehaviour
             planet.transform.localScale = Vector3.one * SolarSystem.Instance.earthScale;
             return;
         }
+        //SYMBOLICZNY REALISTYCZNY
         if (SolarSystem.Instance.mode == 2)
         {
             if (SolarSystem.Instance.earthOrbitalPeriod != 0.0f)

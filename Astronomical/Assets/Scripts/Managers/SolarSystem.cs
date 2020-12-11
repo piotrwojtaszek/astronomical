@@ -10,6 +10,7 @@ public class SolarSystem : MonoBehaviour
     public float earthOrbitDistance = 1f;
     public float solarScale = 1f;
     public float solarSpeed = 1f;
+    [Tooltip("0-realistyczny, 1-symboliczny, 2-hybryda")]
     public int mode = 0;
     public float sunSize = 8f;
     private void Awake()

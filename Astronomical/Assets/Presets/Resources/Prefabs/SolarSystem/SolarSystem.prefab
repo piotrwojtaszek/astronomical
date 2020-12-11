@@ -4803,7 +4803,7 @@ GameObject:
   - component: {fileID: 8669552888316515541}
   - component: {fileID: 8669552888316515540}
   m_Layer: 0
-  m_Name: RealisticSolarSystem
+  m_Name: SolarSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4843,6 +4843,7 @@ MonoBehaviour:
   solarScale: 1
   solarSpeed: 1
   mode: 0
+  sunSize: 8
 --- !u!1 &8669552888525100479
 GameObject:
   m_ObjectHideFlags: 0
@@ -9684,7 +9685,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 397e0e78f7d2d1145bd386602598a64d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunScale: 5
 --- !u!1 &8669552889568408891
 GameObject:
   m_ObjectHideFlags: 0

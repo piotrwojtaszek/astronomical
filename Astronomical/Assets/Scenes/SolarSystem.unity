@@ -174,7 +174,7 @@ PrefabInstance:
     - target: {fileID: 7141621659355075262, guid: d4db7e1b25103614e829ec328093882e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7141621659524913855, guid: d4db7e1b25103614e829ec328093882e,
         type: 3}
@@ -514,7 +514,7 @@ PrefabInstance:
     - target: {fileID: 8669552888316515542, guid: 64533d54737bfaa4ebe8836c39081a4d,
         type: 3}
       propertyPath: m_Name
-      value: RealisticSolarSystem
+      value: SolarSystem
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64533d54737bfaa4ebe8836c39081a4d, type: 3}
