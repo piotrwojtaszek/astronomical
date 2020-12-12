@@ -23,7 +23,16 @@ public class ConstelationEditor : Editor
             socket.AddToList();     
         }
         GUILayout.EndHorizontal();
-
+        if (GUILayout.Button("Add Point"))
+        {
+            if (socket.transform.childCount < 1)
+            {
+                Instantiate(new GameObject("Sockets"), socket.transform);
+                Instantiate(new GameObject("Lines"), socket.transform);
+            }
+            GameObject socektPrefab = Resources.Load<GameObject>("Prefabs2/Interactable/Sockets/CustomSocket");
+            Instantiate(socektPrefab, socket.transform.GetChild(0).transform);
+        }
         if (GUI.changed)
         {
             EditorUtility.SetDirty(target);

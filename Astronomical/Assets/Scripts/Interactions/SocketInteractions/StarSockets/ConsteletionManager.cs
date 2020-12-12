@@ -62,10 +62,12 @@ public class ConsteletionManager : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        foreach (Connection point in connectionPoints)
-        {
-            Handles.DrawLine(point.pos1.transform.position, point.pos2.transform.position);
-        }
+        if (connectionPoints != null)
+            if (connectionPoints.Count > 0)
+                foreach (Connection point in connectionPoints)
+                {
+                    Handles.DrawLine(point.pos1.transform.position, point.pos2.transform.position);
+                }
     }
 }
 [System.Serializable]
