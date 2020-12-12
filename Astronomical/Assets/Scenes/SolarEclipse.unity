@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: b96a9b03ee14b6949a507a3c408a6aec,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -555,16 +555,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7141621659355075234, guid: d4db7e1b25103614e829ec328093882e,
-        type: 3}
-      propertyPath: m_RaycastMask.m_Bits
-      value: 1079
-      objectReference: {fileID: 0}
-    - target: {fileID: 7141621659524913853, guid: d4db7e1b25103614e829ec328093882e,
-        type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7141621659968075872, guid: d4db7e1b25103614e829ec328093882e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -625,21 +615,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Rig
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 730219415277613930, guid: d4db7e1b25103614e829ec328093882e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4db7e1b25103614e829ec328093882e, type: 3}
---- !u!114 &463727986 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7141621660356954271, guid: d4db7e1b25103614e829ec328093882e,
-    type: 3}
-  m_PrefabInstance: {fileID: 413955336}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae26e19cd956134bbdf3c6f65bf393a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &569473950
 GameObject:
   m_ObjectHideFlags: 0
@@ -5948,45 +5925,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1183481899 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7141621659968075874, guid: d4db7e1b25103614e829ec328093882e,
-    type: 3}
-  m_PrefabInstance: {fileID: 413955336}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1183481901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1183481899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc4f2c0214c9b494fa7eb5b8b2c02885, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_System: {fileID: 1183481902}
-  m_TurnAmount: 45
-  m_DebounceTime: 0.5
-  m_EnableTurnLeftRight: 1
-  m_EnableTurnAround: 1
-  m_TurnUsage: 0
-  m_Controllers:
-  - {fileID: 463727986}
-  m_DeadZone: 0.75
---- !u!114 &1183481902 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7141621659968075879, guid: d4db7e1b25103614e829ec328093882e,
-    type: 3}
-  m_PrefabInstance: {fileID: 413955336}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1183481899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03a5df2202a8b96488c744be3bd0c33e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1231339793
 GameObject:
   m_ObjectHideFlags: 0
