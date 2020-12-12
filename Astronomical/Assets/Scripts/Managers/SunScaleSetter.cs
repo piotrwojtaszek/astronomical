@@ -7,15 +7,8 @@ public class SunScaleSetter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(SolarSystem.Instance.mode==0)
-        {
-            float scale = SolarSystem.Instance.earthScale/4f * SolarSystem.Instance.sunSize;
-            transform.localScale = Vector3.one * scale;
+
+            transform.localScale = Vector3.one * SolarSystem.Instance.sunSize;
             return;
-        }
-        if (SolarSystem.Instance.mode == 1)
-        {
-            transform.localScale = Vector3.one* SolarSystem.Instance.sunSize;
-        }
     }
 }

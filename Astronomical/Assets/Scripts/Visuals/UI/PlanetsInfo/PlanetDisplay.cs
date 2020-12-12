@@ -30,7 +30,7 @@ public class PlanetDisplay : MonoBehaviour
         if (SolarSystem.Instance.mode == 0)
         {
             if (SolarSystem.Instance.earthOrbitalPeriod != 0.0f)
-                orbits.speed = SolarSystem.Instance.earthOrbitalPeriod / planetDetails.speed * SolarSystem.Instance.solarSpeed;
+                orbits.speed = SolarSystem.Instance.earthOrbitalPeriod / planetDetails.speed / SolarSystem.Instance.solarSpeed;
             orbits.a = planetDetails.distanceA * SolarSystem.Instance.earthOrbitDistance;
             orbits.b = planetDetails.distanceB * SolarSystem.Instance.earthOrbitDistance;
             float scale = SolarSystem.Instance.earthScale * planetDetails.scale;
@@ -43,7 +43,7 @@ public class PlanetDisplay : MonoBehaviour
         if (SolarSystem.Instance.mode == 1)
         {
             if (SolarSystem.Instance.earthOrbitalPeriod != 0.0f)
-                orbits.speed = SolarSystem.Instance.earthOrbitalPeriod / planetDetails.speed * SolarSystem.Instance.solarSpeed;
+                orbits.speed = SolarSystem.Instance.earthOrbitalPeriod / planetDetails.speed / SolarSystem.Instance.solarSpeed;
             orbits.a = planetDetails.place * SolarSystem.Instance.earthOrbitDistance;
             orbits.b = planetDetails.place * SolarSystem.Instance.earthOrbitDistance;
             hoverPanel.localScale = oldInfoScale * 3f;
@@ -55,7 +55,7 @@ public class PlanetDisplay : MonoBehaviour
         if (SolarSystem.Instance.mode == 2)
         {
             if (SolarSystem.Instance.earthOrbitalPeriod != 0.0f)
-                orbits.speed = SolarSystem.Instance.earthOrbitalPeriod / planetDetails.speed * SolarSystem.Instance.solarSpeed;
+                orbits.speed = SolarSystem.Instance.earthOrbitalPeriod / planetDetails.speed / SolarSystem.Instance.solarSpeed;
             orbits.a = planetDetails.place * SolarSystem.Instance.earthOrbitDistance;
             orbits.b = planetDetails.place * SolarSystem.Instance.earthOrbitDistance;
             float scale = SolarSystem.Instance.earthScale * planetDetails.scale;
