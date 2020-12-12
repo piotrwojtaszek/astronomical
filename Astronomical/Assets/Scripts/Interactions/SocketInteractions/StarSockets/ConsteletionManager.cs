@@ -56,7 +56,6 @@ public class ConsteletionManager : MonoBehaviour
         GameObject obj = Instantiate(linePrefab, transform.GetChild(transform.childCount - 1).transform);
         LineScript line = obj.GetComponent<LineScript>();
         line.SetPoints(pos1, pos2);
-        Debug.Log(pos1 + "   " + pos2);
         connectionLines.Add(line);
     }
 

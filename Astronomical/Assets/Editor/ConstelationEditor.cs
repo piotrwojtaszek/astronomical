@@ -10,6 +10,7 @@ public class ConstelationEditor : Editor
         base.OnInspectorGUI();
 
         ConsteletionManager socket = (ConsteletionManager)target;
+
         GUILayout.BeginHorizontal();
         if (GUILayout.Button("Add to buffor"))
         {
@@ -22,7 +23,6 @@ public class ConstelationEditor : Editor
         {
             socket.AddToList();     
         }
-        GUILayout.EndHorizontal();
         if (GUILayout.Button("Add Point"))
         {
             if (socket.transform.childCount < 1)
@@ -33,6 +33,8 @@ public class ConstelationEditor : Editor
             GameObject socektPrefab = Resources.Load<GameObject>("Prefabs2/Interactable/Sockets/CustomSocket");
             Instantiate(socektPrefab, socket.transform.GetChild(0).transform);
         }
+        GUILayout.EndHorizontal();
+
         if (GUI.changed)
         {
             EditorUtility.SetDirty(target);
