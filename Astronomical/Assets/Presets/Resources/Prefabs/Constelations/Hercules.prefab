@@ -112,17 +112,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2871fab576524a44c96d1a29bbe3d54f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentConnection:
+    pos1: {fileID: 0}
+    pos2: {fileID: 0}
   connectionLines: []
   connectionPoints:
   - pos1: {fileID: 5450521057690767836}
     pos2: {fileID: 2990366081773533672}
   - pos1: {fileID: 2990366081773533672}
     pos2: {fileID: 1994209673115525651}
-  - pos1: {fileID: 2990366081773533672}
-    pos2: {fileID: 7764438799505113013}
   - pos1: {fileID: 1994209673115525651}
     pos2: {fileID: 2543815190353850307}
   - pos1: {fileID: 2543815190353850307}
+    pos2: {fileID: 7764438799505113013}
+  - pos1: {fileID: 2990366081773533672}
     pos2: {fileID: 7764438799505113013}
   - pos1: {fileID: 7764438799505113013}
     pos2: {fileID: 3147118479832150947}
@@ -144,8 +147,7 @@ PrefabInstance:
         type: 3}
       propertyPath: connections.Array.data[0]
       value: 
-      objectReference: {fileID: 1325478705669322249, guid: 0489b795ae1bfbd4f8230740b4bc6715,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6674180100712496194, guid: 8a09ae8006800b64a84e60ee0c0444a6,
         type: 3}
       propertyPath: m_Name
@@ -257,8 +259,7 @@ PrefabInstance:
         type: 3}
       propertyPath: connections.Array.data[0]
       value: 
-      objectReference: {fileID: 1325478705669322249, guid: 0489b795ae1bfbd4f8230740b4bc6715,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6674180100712496194, guid: 8a09ae8006800b64a84e60ee0c0444a6,
         type: 3}
       propertyPath: m_Name
@@ -370,8 +371,7 @@ PrefabInstance:
         type: 3}
       propertyPath: connections.Array.data[0]
       value: 
-      objectReference: {fileID: 1325478705669322249, guid: 0489b795ae1bfbd4f8230740b4bc6715,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6674180100712496194, guid: 8a09ae8006800b64a84e60ee0c0444a6,
         type: 3}
       propertyPath: m_Name
@@ -483,8 +483,7 @@ PrefabInstance:
         type: 3}
       propertyPath: connections.Array.data[0]
       value: 
-      objectReference: {fileID: 1325478705669322249, guid: 0489b795ae1bfbd4f8230740b4bc6715,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6674180100712496194, guid: 8a09ae8006800b64a84e60ee0c0444a6,
         type: 3}
       propertyPath: m_Name
@@ -596,8 +595,7 @@ PrefabInstance:
         type: 3}
       propertyPath: connections.Array.data[0]
       value: 
-      objectReference: {fileID: 1325478705669322249, guid: 0489b795ae1bfbd4f8230740b4bc6715,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6674180100712496194, guid: 8a09ae8006800b64a84e60ee0c0444a6,
         type: 3}
       propertyPath: m_Name
@@ -709,8 +707,7 @@ PrefabInstance:
         type: 3}
       propertyPath: connections.Array.data[0]
       value: 
-      objectReference: {fileID: 1325478705669322249, guid: 0489b795ae1bfbd4f8230740b4bc6715,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6674180100712496194, guid: 8a09ae8006800b64a84e60ee0c0444a6,
         type: 3}
       propertyPath: m_Name
@@ -822,8 +819,7 @@ PrefabInstance:
         type: 3}
       propertyPath: connections.Array.data[0]
       value: 
-      objectReference: {fileID: 1325478705669322249, guid: 0489b795ae1bfbd4f8230740b4bc6715,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6674180100712496194, guid: 8a09ae8006800b64a84e60ee0c0444a6,
         type: 3}
       propertyPath: m_Name

@@ -64,7 +64,7 @@ public class LineScript : MonoBehaviour
     private void OnDrawGizmos()
     {
 
-        Gizmos.DrawLine(pos1.transform.position, pos2.transform.position);
+        //Gizmos.DrawLine(pos1.transform.position, pos2.transform.position);
 
     }
 }
