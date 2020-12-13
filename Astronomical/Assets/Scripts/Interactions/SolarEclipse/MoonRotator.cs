@@ -1,31 +1,37 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
-using UnityEngine.XR.Interaction.Toolkit;
 
-public class RayMode : MonoBehaviour
+public class MoonRotator : MonoBehaviour
 {
-    public XRController rayInteractor;
-    public XRController teleportController;
     [SerializeField]
     InputDeviceCharacteristics deviceCharacteristics;
     InputDevice targetDevice;
-
+    [SerializeField] Rigidbody moonPivot;
+    [SerializeField] float multiplier;
+    [SerializeField] Transform directionalLight;
+    [SerializeField] Transform target;//poit where is total eclipse
     void Update()
     {
         if (!targetDevice.isValid)
         {
             UpdateDevices();
         }
-        rayInteractor.gameObject.SetActive(!CheckIfActived());
-        teleportController.gameObject.SetActive(CheckIfActived());
+        GetValue();
+
     }
 
-    public bool CheckIfActived()
+    public void GetValue()
     {
-        InputHelpers.IsPressed(targetDevice, InputHelpers.Button.PrimaryAxis2DUp, out bool isActived, 0.75f);
-        return isActived;
+        Vector2 discardedValue;
+        if (targetDevice.TryGetFeatureValue(CommonUsages.primary2DAxis, out discardedValue))
+        {
+            moonPivot.AddForce(transform.up * discardedValue.y*multiplier);
+            moonPivot.AddForce(transform.right * discardedValue.x*multiplier);
+            Debug.Log("Joystic: " + discardedValue);
+        }
     }
 
     void UpdateDevices()

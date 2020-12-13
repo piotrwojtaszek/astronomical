@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SolarSystem.unity
     guid: 0498794501420cb43a350239dbe43006
   - enabled: 0
@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Constelations.unity
     guid: 00b0d6cc14871ad4ba8db478409d16fc
+  - enabled: 1
+    path: Assets/Scenes/SolarEclipseNature.unity
+    guid: 5e7af4bd95ac53a4cb784a9eedf8f6f9
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f6dd754f17d609e458c72d391208b1c7,
       type: 2}

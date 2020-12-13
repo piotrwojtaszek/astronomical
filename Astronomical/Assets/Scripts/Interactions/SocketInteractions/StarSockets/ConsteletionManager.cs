@@ -65,7 +65,9 @@ public class ConsteletionManager : MonoBehaviour
             if (connectionPoints.Count > 0)
                 foreach (Connection point in connectionPoints)
                 {
+#if UNITY_EDITOR
                     Handles.DrawLine(point.pos1.transform.position, point.pos2.transform.position);
+#endif
                 }
     }
 }

@@ -47,7 +47,9 @@ public class CustomSocket : XRSocketInteractor
 
     private void OnDrawGizmos()
     {
+#if UNITY_EDITOR
         Handles.Label(transform.position, transform.name);
         Handles.SphereCap(0, transform.position, Quaternion.identity, transform.localScale.x/2f);
+#endif
     }
 }
