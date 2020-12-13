@@ -244,9 +244,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deviceCharacteristics: 512
   moonPivot: {fileID: 0}
-  multiplier: 100
+  forceMultiplier: 0
   directionalLight: {fileID: 0}
   target: {fileID: 0}
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  moonRenderer: {fileID: 0}
+  eclipseBloom: {fileID: 0}
 --- !u!1 &3543209329609997934
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +381,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_RenderPostProcessing: 0
-  m_Antialiasing: 1
+  m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
