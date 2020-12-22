@@ -34,11 +34,6 @@ public class RayMode : MonoBehaviour
         InputDeviceCharacteristics controllerCharacteristics = deviceCharacteristics | InputDeviceCharacteristics.Controller;
         InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, inputDevices);
 
-        foreach (var item in inputDevices)
-        {
-            Debug.Log(item.name);
-        }
-
         if (inputDevices.Count > 0)
         {
             targetDevice = inputDevices[0];
