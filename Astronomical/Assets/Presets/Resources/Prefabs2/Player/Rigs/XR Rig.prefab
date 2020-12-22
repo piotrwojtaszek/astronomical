@@ -1660,12 +1660,12 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: -1
+  m_RendererIndex: 0
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 1
+  m_RenderPostProcessing: 0
   m_Antialiasing: 1
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -1726,7 +1726,7 @@ MonoBehaviour:
   m_RigBaseGameObject: {fileID: 7141621659968075874}
   m_CameraFloorOffsetObject: {fileID: 7141621660483174417}
   m_CameraGameObject: {fileID: 7141621659524913849}
-  m_TrackingOriginMode: 1
+  m_TrackingOriginMode: 2
   m_TrackingSpace: 3
   m_CameraYOffset: 1.1
 --- !u!114 &7141621659968075878

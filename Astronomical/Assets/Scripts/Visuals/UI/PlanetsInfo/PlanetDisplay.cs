@@ -7,24 +7,26 @@ using UnityEngine;
 /// </summary>
 public class PlanetDisplay : MonoBehaviour
 {
+    SphereCollider collider;
     public SPlanetInfo planetDetails;
     public TextMeshProUGUI hoverInfo;
     public RectTransform hoverPanel;
     public PlanetsOrbits orbits;
     GameObject planet = null;
     Vector3 oldInfoScale;
+    float uiScale = 1f;
     private void Start()
     {
-
         planet = Instantiate(planetDetails.graphic, transform);
         hoverInfo.text = planetDetails.name;
         oldInfoScale = hoverPanel.localScale;
         planet.transform.eulerAngles = new Vector3(0f, 0f, planetDetails.tilt);
-
+        collider = GetComponent<SphereCollider>();
     }
 
     private void Update()
     {
+        collider.radius = 0.51f* SolarSystem.Instance.earthScale * planetDetails.scale;
         planet.transform.Rotate(transform.up, (Time.deltaTime / planetDetails.rotationSpeed) * SolarSystem.Instance.solarSpeed);
         //ZŁOŻONY REALISTYCZNY
         if (SolarSystem.Instance.mode == 0)
@@ -34,8 +36,10 @@ public class PlanetDisplay : MonoBehaviour
             orbits.a = planetDetails.distanceA * SolarSystem.Instance.earthOrbitDistance;
             orbits.b = planetDetails.distanceB * SolarSystem.Instance.earthOrbitDistance;
             float scale = SolarSystem.Instance.earthScale * planetDetails.scale;
-            hoverPanel.localScale = oldInfoScale * scale;
-            hoverPanel.localPosition = Vector3.up * scale / 3f;
+            uiScale = scale;
+            uiScale = Mathf.Clamp(uiScale, 1f, 5f);
+            hoverPanel.localScale = oldInfoScale*uiScale;
+            hoverPanel.localPosition = Vector3.up * scale/3f;
             planet.transform.localScale = Vector3.one * SolarSystem.Instance.earthScale * planetDetails.scale;
             return;
         }
@@ -46,8 +50,8 @@ public class PlanetDisplay : MonoBehaviour
                 orbits.speed = SolarSystem.Instance.earthOrbitalPeriod / planetDetails.speed / SolarSystem.Instance.solarSpeed;
             orbits.a = planetDetails.place * SolarSystem.Instance.earthOrbitDistance;
             orbits.b = planetDetails.place * SolarSystem.Instance.earthOrbitDistance;
-            hoverPanel.localScale = oldInfoScale * 3f;
-            hoverPanel.localPosition = Vector3.up / 4f;
+            hoverPanel.localScale = oldInfoScale;
+            hoverPanel.localPosition = Vector3.up / 5f;
             planet.transform.localScale = Vector3.one * SolarSystem.Instance.earthScale;
             return;
         }
@@ -59,7 +63,9 @@ public class PlanetDisplay : MonoBehaviour
             orbits.a = planetDetails.place * SolarSystem.Instance.earthOrbitDistance;
             orbits.b = planetDetails.place * SolarSystem.Instance.earthOrbitDistance;
             float scale = SolarSystem.Instance.earthScale * planetDetails.scale;
-            hoverPanel.localScale = oldInfoScale * scale;
+            uiScale = scale;
+            uiScale = Mathf.Clamp(uiScale, 1f, 5f);
+            hoverPanel.localScale = oldInfoScale * uiScale;
             hoverPanel.localPosition = Vector3.up * scale / 3f;
             planet.transform.localScale = Vector3.one * SolarSystem.Instance.earthScale * planetDetails.scale;
             return;

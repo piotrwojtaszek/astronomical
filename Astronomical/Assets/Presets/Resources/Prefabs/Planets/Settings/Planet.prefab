@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 6915520942179022598}
   - component: {fileID: 6915520942179022599}
   - component: {fileID: 5302284236284776501}
-  m_Layer: 0
+  - component: {fileID: 4029279599587061787}
+  - component: {fileID: 141079543808381141}
+  m_Layer: 8
   m_Name: Planet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,6 +66,64 @@ MonoBehaviour:
   hoverInfo: {fileID: 1374468815451776277}
   hoverPanel: {fileID: 1374468814150126817}
   orbits: {fileID: 6915520942179022599}
+--- !u!135 &4029279599587061787
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6915520942179022593}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &141079543808381141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6915520942179022593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f6cfbfba9b548aaa00d52cfe8a50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_OnFirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectCanceled:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnActivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeactivate:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CustomReticle: {fileID: 0}
 --- !u!1001 &7095237020459604992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71,6 +131,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6915520942179022598}
     m_Modifications:
+    - target: {fileID: 8170726407612823592, guid: 13e0d9fdd221f2449aa53256586cbc6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170726407742748947, guid: 13e0d9fdd221f2449aa53256586cbc6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8170726409178140897, guid: 13e0d9fdd221f2449aa53256586cbc6e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -180,6 +250,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlanetHoverName
+      objectReference: {fileID: 0}
+    - target: {fileID: 8170726409178140909, guid: 13e0d9fdd221f2449aa53256586cbc6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13e0d9fdd221f2449aa53256586cbc6e, type: 3}

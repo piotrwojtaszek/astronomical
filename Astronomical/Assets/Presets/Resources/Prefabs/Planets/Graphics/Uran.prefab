@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8796951741425505667}
   - component: {fileID: 7356927700834352024}
   - component: {fileID: 7110742532175673189}
-  - component: {fileID: 7467430738151601840}
   m_Layer: 0
   m_Name: Uran
   m_TagString: Untagged
@@ -81,19 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &7467430738151601840
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4514144735316179604}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &3726241146732031467
 PrefabInstance:
   m_ObjectHideFlags: 0
