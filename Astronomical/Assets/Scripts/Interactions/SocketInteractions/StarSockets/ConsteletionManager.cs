@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+
 [System.Serializable]
 public class ConsteletionManager : MonoBehaviour
 {
-
+    public string constelationName;
     public Connection connectionBuffor = null;
 
     public List<LineScript> connectionLines;
-
     public List<Connection> connectionPoints;
-    GameObject linePrefab;
+    public List<CustomSocket> socketList = new List<CustomSocket>();
+    private GameObject linePrefab;
+
 
     private void Start()
     {
@@ -57,6 +60,18 @@ public class ConsteletionManager : MonoBehaviour
         LineScript line = obj.GetComponent<LineScript>();
         line.SetPoints(pos1, pos2);
         connectionLines.Add(line);
+    }
+
+    public void CheckIfSolved()
+    {
+        int filled = 0;
+        foreach(CustomSocket custom in socketList)
+        {
+            if (custom.isFilled)
+                filled++;
+        }
+        if (filled == socketList.Count)
+            Debug.LogWarning("ułożone");
     }
 
     private void OnDrawGizmos()

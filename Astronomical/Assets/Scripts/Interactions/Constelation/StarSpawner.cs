@@ -55,9 +55,9 @@ public class StarSpawner : MonoBehaviour
         Follow();
         m_socket = Instantiate(m_socketPrefab, transform);
         Instantiate(m_prefab, m_socket.transform.position + Vector3.up, Quaternion.identity);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(4f);
         Destroy(m_socket);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         spawnPossible = true;
     }
 

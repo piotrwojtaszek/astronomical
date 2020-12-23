@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1363,6 +1363,11 @@ PrefabInstance:
       propertyPath: connectionPoints.Array.data[18].pos2
       value: 
       objectReference: {fileID: 368673068}
+    - target: {fileID: 2756707940015779249, guid: 366d1a1aa92115249ba02eba7f1c3faf,
+        type: 3}
+      propertyPath: constelationName
+      value: skorpion
+      objectReference: {fileID: 0}
     - target: {fileID: 2756707940015779255, guid: 366d1a1aa92115249ba02eba7f1c3faf,
         type: 3}
       propertyPath: m_Name
@@ -12827,7 +12832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1076233823
 Transform:
   m_ObjectHideFlags: 0
@@ -12856,6 +12861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2871fab576524a44c96d1a29bbe3d54f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  constelationName: "bli\u017Ani\u0119ta"
   connectionBuffor:
     pos1: {fileID: 0}
     pos2: {fileID: 0}
@@ -12891,6 +12897,7 @@ MonoBehaviour:
     pos2: {fileID: 1857601064}
   - pos1: {fileID: 1857601064}
     pos2: {fileID: 703488485}
+  socketList: []
 --- !u!1 &1132277692
 GameObject:
   m_ObjectHideFlags: 0
@@ -15735,6 +15742,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1807630412}
     m_Modifications:
+    - target: {fileID: 4608987774329159984, guid: 0489b795ae1bfbd4f8230740b4bc6715,
+        type: 3}
+      propertyPath: constelationName
+      value: herkules
+      objectReference: {fileID: 0}
     - target: {fileID: 4608987774329159985, guid: 0489b795ae1bfbd4f8230740b4bc6715,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16136,7 +16148,7 @@ PrefabInstance:
     - target: {fileID: 8984991450401007026, guid: 7453eec99d6848b41bc24559cac89cbd,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8984991450401007027, guid: 7453eec99d6848b41bc24559cac89cbd,
         type: 3}
@@ -16192,6 +16204,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8984991450401007036, guid: 7453eec99d6848b41bc24559cac89cbd,
+        type: 3}
+      propertyPath: constelationName
+      value: "ma\u0142a nied\u017Awiedzica"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7453eec99d6848b41bc24559cac89cbd, type: 3}
